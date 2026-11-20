@@ -1,0 +1,91 @@
+* { box-sizing: border-box; }
+:root {
+  --navy: #1b3152;
+  --ink: #303943;
+  --muted: #77818c;
+  --page: #f0f1f8;
+  --green: #24752b;
+  --green-border: #65bd68;
+}
+html, body { margin: 0; min-height: 100%; font-family: Arial, Helvetica, sans-serif; color: var(--ink); }
+body { background: var(--page); display: flex; flex-direction: column; min-height: 100vh; }
+.site-header {
+  height: 102px; background: #fff; display: flex; align-items: center;
+  justify-content: space-between; padding: 0 clamp(22px, 3.1vw, 48px);
+  border-bottom: 1px solid #e7e9ed;
+}
+.brand { display: flex; align-items: center; gap: 13px; }
+.brand-logo { display: block; width: 340px; height: auto; flex: 0 0 auto; }
+.brand-copy { display: flex; flex-direction: column; line-height: 1.12; }
+.brand-copy .eyebrow { color: #5b6877; font-size: 10px; letter-spacing: 1.5px; font-weight: 700; }
+.brand-copy strong { font-size: clamp(18px, 2vw, 25px); color: #202c3b; }
+.brand-copy small { font-size: 11px; color: #657180; margin-top: 4px; }
+nav { display: flex; align-items: center; gap: 30px; height: 100%; }
+nav a { color: var(--navy); text-decoration: none; font-size: 15px; }
+.home-link { padding: 12px 8px; }
+.login-link { border: 1px solid #7d8793; border-radius: 2px; padding: 10px 14px; font-weight: 700; }
+.login-link span { margin-right: 8px; font-size: 17px; }
+main { flex: 1; padding: 28px 18px 150px; }
+.demo-banner {
+  max-width: 1070px; margin: 0 auto 22px; text-align: center;
+  background: #fff4d5; border: 1px solid #e9d49b; color: #755400;
+  padding: 10px 14px; font-size: 11px; font-weight: 800; letter-spacing: .7px;
+}
+.verification { max-width: 1070px; margin: 0 auto; }
+h1 { text-align: center; font-size: clamp(19px, 2vw, 23px); margin: 0 0 22px; font-weight: 700; }
+.search-form {
+  background: #fff; padding: 20px 24px; margin: 0 auto 18px;
+  max-width: 760px; border: 1px solid #e7e9ed;
+}
+.search-form label { display: block; font-size: 13px; font-weight: 700; margin-bottom: 9px; }
+.search-row { display: flex; gap: 10px; }
+input { min-width: 0; flex: 1; border: 1px solid #c9ced6; border-radius: 3px; padding: 12px; font-size: 15px; color: var(--ink); }
+button { cursor: pointer; font: inherit; }
+.search-row button { border: 0; border-radius: 3px; background: var(--navy); color: #fff; font-weight: 700; padding: 0 24px; }
+.search-row button:hover { background: #29476f; }
+.hint { color: var(--muted); font-size: 11px; margin: 9px 0 0; }
+.result-card { background: #fff; padding: 48px clamp(20px, 6vw, 88px) 28px; min-height: 245px; }
+.status {
+  min-height: 98px; border: 2px solid var(--green-border); border-radius: 9px;
+  background: var(--green); color: #eaf5ea; display: flex; align-items: center;
+  justify-content: center; gap: 9px; text-align: center; padding: 18px;
+  font-size: 17px; margin-bottom: 20px;
+}
+.status-icon { border: 2px solid currentColor; border-radius: 50%; width: 20px; height: 20px; line-height: 16px; font-size: 13px; font-weight: 700; }
+.status.status-demo { background: #28633c; border-color: #78ae82; }
+.status.status-not-found { background: #8b3d36; border-color: #c9827c; }
+.details { margin: 0; display: grid; gap: 8px; justify-content: center; }
+.details div { display: flex; justify-content: center; gap: 9px; flex-wrap: wrap; font-size: 14px; }
+.details dt { color: #68717a; }
+.details dd { margin: 0; color: #7d858d; }
+.disclaimer { text-align: center; color: #9a6b2e; font-size: 11px; line-height: 1.5; margin: 20px auto 0; max-width: 700px; }
+.notice {
+  position: relative; background: #fff3cb; color: #683b16; text-align: center;
+  padding: 13px 44px 15px; border-top: 1px solid #f1dfa8;
+}
+.notice strong { color: #8b1f19; font-size: 16px; }
+.notice p { margin: 7px 0 0; font-size: 12px; }
+.notice-close { position: absolute; right: 13px; top: 7px; border: 0; background: transparent; color: #8b1f19; font-size: 25px; }
+.site-footer {
+  background: var(--navy); color: #aab6c8; min-height: 54px; display: flex;
+  justify-content: space-between; align-items: center; gap: 14px; padding: 12px 20px; font-size: 11px;
+}
+@media (max-width: 620px) {
+  .site-header { height: auto; min-height: 84px; padding: 12px 16px; gap: 12px; }
+  .brand-logo { width: 200px; }
+  .brand { gap: 9px; }
+  .brand-copy strong { font-size: 16px; }
+  .brand-copy small { font-size: 9px; }
+  nav { gap: 10px; }
+  .home-link { display: none; }
+  .login-link { padding: 9px; font-size: 12px; }
+  main { padding: 20px 12px 55px; }
+  .search-form { padding: 16px; }
+  .search-row { flex-direction: column; }
+  .search-row button { min-height: 43px; }
+  .result-card { padding: 24px 14px; }
+  .status { min-height: 82px; font-size: 14px; }
+  .details div { font-size: 12px; }
+  .notice p { line-height: 1.5; }
+  .site-footer { flex-direction: column; text-align: center; }
+}

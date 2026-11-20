@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unofficial company registration verification interface demonstration.">
+  <title>Company Verification — Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img class="brand-logo" src="logo.png" alt="Registrar of Companies, Sri Lanka">
+    </div>
+    <nav aria-label="Main navigation">
+      <a class="home-link" href="#">Home</a>
+      <a class="login-link" href="#search"><span aria-hidden="true">↪</span> LOGIN</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="verification" aria-labelledby="page-title">
+      <h1 id="page-title">Verification of Certificate of Incorporation Business Registration No: PV00273539</h1>
+     
+     <!-- 
+      <form id="search-form" class="search-form">
+        <label for="registration-number">Business Registration Number</label>
+        <div class="search-row">
+          <input id="registration-number" name="registration-number"
+                 value="PV00273539" placeholder="Enter registration number"
+                 autocomplete="off" required>
+          <button type="submit">Verify</button>
+        </div>
+      </form>
+      -->
+
+      <section class="result-card" aria-live="polite" aria-label="Verification result">
+        <div id="status" class="status status-demo">
+          <span class="status-icon" aria-hidden="true">✓</span>
+          <span id="status-text">This is a Valid Certificate.</span>
+        </div>
+        <dl class="details">
+          <div><dt>Business Registration No:</dt><dd id="result-number">PV00273539</dd></div>
+          <div><dt>Company Name:</dt><dd id="company-name">ANNAI HOLDINGS (PVT) LTD</dd></div>
+          <div><dt>Incorporated On:</dt><dd id="incorporated-on">2017-03-21</dd></div>
+        </dl>
+      </section>
+    </section>
+  </main>
+
+  <aside class="notice">
+    <button class="notice-close" aria-label="Dismiss notice" type="button">×</button>
+    <strong>IMPORTANT NOTICE</strong>
+    <p>If you get "Data Communication Errors" when you log in to the system, please logout and clear cache by pressing function key F5 with Control key (CTRL + F5) few times and log back again.</p>
+  </aside>
+
+  <footer class="site-footer">
+    <span>Version : F4.9.0.1</span>
+    <span>© DRC - 2026 . All rights reserved</span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
